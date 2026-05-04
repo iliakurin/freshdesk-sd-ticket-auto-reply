@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshdesk Ticket Auto Reply</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Freshdesk Ticket Auto Reply</p>
+          <h1>Send first replies faster</h1>
+        </div>
+        <div class="trial-pill" id="trialText">Loading</div>
+      </header>
+
+      <section class="banner" id="statusBanner">Loading app state...</section>
+
+      <section class="license-panel" id="licensePanel" hidden>
+        <div>
+          <p class="eyebrow">Activation</p>
+          <h2>Enter a license key</h2>
+          <p class="muted">Your 7-day trial has ended. Activation is checked locally on this computer.</p>
+        </div>
+        <div class="activation-row">
+          <input id="licenseKey" type="text" autocomplete="off" spellcheck="false" placeholder="FDAR-XXXXXX-XXXXXX-XXXXXX-00">
+          <button id="activateButton" type="button">Activate</button>
+        </div>
+        <p class="form-status" id="activationStatus" data-tone="neutral"></p>
+      </section>
+
+      <div class="app-grid" id="appPanel" hidden>
+        <section class="panel settings-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Settings</p>
+              <h2>Freshdesk connection</h2>
+            </div>
+            <button id="saveSettingsButton" type="button">Save Settings</button>
+          </div>
+
+          <div class="field-grid">
+            <label>
+              <span>Freshdesk domain</span>
+              <input id="freshdeskDomain" type="text" autocomplete="off" spellcheck="false" placeholder="company.freshdesk.com">
+            </label>
+            <label>
+              <span>Freshdesk API key</span>
+              <input id="apiKey" type="password" autocomplete="off" spellcheck="false" placeholder="Paste API key">
+            </label>
+            <label class="wide">
+              <span>Agent or user name <em>optional</em></span>
+              <input id="agentName" type="text" autocomplete="name" placeholder="Support Team">
+            </label>
+            <label class="wide">
+              <span>Message template</span>
+              <textarea id="messageTemplate" rows="7" spellcheck="true"></textarea>
+            </label>
+          </div>
+
+          <p class="form-status" id="settingsStatus" data-tone="neutral"></p>
+        </section>
+
+        <section class="panel reply-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Reply workflow</p>
+              <h2>Send a ticket reply</h2>
+            </div>
+            <button id="useTemplateButton" type="button" class="secondary">Use Template</button>
+          </div>
+
+          <label>
+            <span>Ticket ID</span>
+            <input id="ticketId" type="text" inputmode="numeric" autocomplete="off" placeholder="12345">
+          </label>
+
+          <label>
+            <span>Reply message preview</span>
+            <textarea id="replyMessage" rows="10" spellcheck="true"></textarea>
+          </label>
+
+          <button id="sendReplyButton" type="button" class="primary">Send Reply</button>
+          <p class="form-status" id="replyStatus" data-tone="neutral"></p>
+        </section>
+      </div>
+    </main>
+
+    <script src="./renderer.js"></script>
+  </body>
+</html>

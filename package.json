@@ -1,0 +1,33 @@
+{
+  "name": "freshdesk-ticket-auto-reply",
+  "version": "1.0.0",
+  "description": "Small Electron desktop app for quickly replying to Freshdesk tickets.",
+  "main": "main.js",
+  "author": "",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.freshdesk.ticketautoreply",
+    "productName": "Freshdesk Ticket Auto Reply",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer.js",
+      "index.html",
+      "styles.css",
+      "license-hashes.js",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  }
+}
