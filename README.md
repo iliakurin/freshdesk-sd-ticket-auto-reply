@@ -39,32 +39,7 @@ npm install
 
 ```bash
 npm start
-```
 
-## Build
-
-```bash
-npm run build
-```
-
-## License Files
-
-The public repository intentionally does not include private license files:
-
-- `license-hashes.js`
-- `generated-license-keys.txt`
-
-For a private commercial build, create `license-hashes.js` locally with this shape:
-
-```js
-const LICENSE_HASHES = [
-  "sha256-hash-goes-here"
-];
-
-module.exports = { LICENSE_HASHES };
-```
-
-Keep plain license keys outside the public repository.
 
 ## Security Notes
 
