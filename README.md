@@ -1,7 +1,7 @@
 # Freshdesk Ticket Auto Reply
 
 A small Electron desktop app for quickly sending first replies to Freshdesk tickets. It is designed for support teams that want a simple local tool for improving response speed and first-response KPI performance.
-
+Find full version is here https://kurinova.gumroad.com/l/yajpt
 ## Features
 
 - Freshdesk domain and API key settings
